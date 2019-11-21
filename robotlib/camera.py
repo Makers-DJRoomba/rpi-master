@@ -8,7 +8,17 @@ from picamera import PiCamera
 
 class Camera:
   def __init__(self):
+  	self.camera = PiCamera()
+  	slef.camera.resolution = (1024, 768)
 
-  # other functions
+  def capture_image(self, filename):
+  	self.camera.capture(filename)
+
+  def start_recording(self, filename):
+  	self.camera.start_recording(filename)
+
+  def stop_recording(self):
+  	self.camera.stop_recording()
+
 
     
