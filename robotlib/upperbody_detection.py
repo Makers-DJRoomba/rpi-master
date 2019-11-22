@@ -1,12 +1,9 @@
 """
-	Face Detection with Haar Cascades from OpenCV
-	Run with second argument as filepath of pre-trained face classifiers
+	Upper Body Detection with Haar Cascades from OpenCV
 """
 import numpy as np
-import sys
 import cv2
 
-#my local path hehe just so i remember
 face_cascade = cv2.CascadeClassifier('../cascades/haarcascade_upperbody.xml')
 
 #start video
