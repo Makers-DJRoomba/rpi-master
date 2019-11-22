@@ -7,9 +7,7 @@ import sys
 import cv2
 
 #my local path hehe just so i remember
-#/usr/local/Cellar/opencv/4.1.2/share/opencv4/lbpcascades/haarcascade_upperbody.xml
-cascade_path = sys.argv[1]
-face_cascade = cv2.CascadeClassifier(cascade_path)
+face_cascade = cv2.CascadeClassifier('../cascades/haarcascade_upperbody.xml')
 
 #start video
 video_capture = cv2.VideoCapture(0)
