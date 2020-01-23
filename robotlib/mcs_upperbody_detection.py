@@ -1,10 +1,10 @@
 """
-	Upper Body Detection with Haar Cascades from OpenCV
+	MCS Upper Body Detection with Haar Cascades from OpenCV
 """
 import numpy as np
 import cv2
 
-body_cascade = cv2.CascadeClassifier('../cascades/haarcascade_upperbody.xml')
+body_cascade = cv2.CascadeClassifier('../cascades/haarcascade_mcs_upperbody.xml')
 
 #start video
 video_capture = cv2.VideoCapture(0)
@@ -27,8 +27,10 @@ while True:
     )
 
     #draw rectangles around bodies
+    # print("hi: " + str(bodies))
     for (x, y, w, h) in bodies:
-        cv2.rectangle(frame, (x, y), (x+w, y+h), (255, 105, 180), 2)
+        cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2)
+        break
 
     #show video
     cv2.imshow('video_frame', frame)

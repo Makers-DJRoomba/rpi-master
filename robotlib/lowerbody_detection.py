@@ -1,10 +1,10 @@
 """
-	Upper Body Detection with Haar Cascades from OpenCV
+	Lower Body Detection with Haar Cascades from OpenCV
 """
 import numpy as np
 import cv2
 
-body_cascade = cv2.CascadeClassifier('../cascades/haarcascade_upperbody.xml')
+body_cascade = cv2.CascadeClassifier('../cascades/haarcascade_lowerbody.xml')
 
 #start video
 video_capture = cv2.VideoCapture(0)
