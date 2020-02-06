@@ -17,13 +17,13 @@ class Serial:
     )
 
   #write to serial with data
-  def write(self, data):
-    self.ser.write('%d\n'%(data))
-    print('sent: ' + data)
+  def write(self, left, right):
+    ser.write(bytes(str(left) + "," + str(right) + "\n", 'utf-8'))
+    print('sent: ' + left + ', ' + right)
 
   #keep reading until value is received, then return 
   def read(self):
-    received = self.ser.readline()
+    received = self.ser.readline().decode('utf-8')
 
     while(not received):
       received = self.ser.readline()
