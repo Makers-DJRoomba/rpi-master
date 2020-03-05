@@ -25,12 +25,12 @@ class Serial:
   def read(self):
     received = self.ser.readline().decode('utf-8')
 
-    while(not received):
-      received = self.ser.readline()
+    # while(not received):
+    #   received = self.ser.readline()
 
-    print('recieved: ' + received)
-    received_int = int(received) - 48
-    return received_int
+    # print('recieved: ' + received)
+    # received_int = int(received) - 48
+    return received
 
   def close(self):
     self.ser.close()
