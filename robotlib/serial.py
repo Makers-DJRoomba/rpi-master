@@ -7,7 +7,7 @@ import serial
 class Serial:
   
   def __init__(self):
-    self.ser = = serial.Serial(
+    self.ser = serial.Serial(
         port='/dev/ttyACM0', 
         baudrate = 9600,
         parity=serial.PARITY_NONE,
@@ -18,8 +18,8 @@ class Serial:
 
   #write to serial with data
   def write(self, left, right):
-    ser.write(bytes(str(left) + "," + str(right) + "\n", 'utf-8'))
-    print('sent: ' + left + ', ' + right)
+    self.ser.write(bytes(str(left) + "," + str(right) + "\n", 'utf-8'))
+    print('sent: ' + str(left) + ', ' + str(right))
 
   #keep reading until value is received, then return 
   def read(self):

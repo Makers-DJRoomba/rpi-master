@@ -1,7 +1,7 @@
 import robotlib
 
 def main():
-  ser = robotlib.Serial()
+  ser = robotlib.serial.Serial()
 
   while 1:
     ser.write(100, 25)
